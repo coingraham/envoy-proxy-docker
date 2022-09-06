@@ -11,7 +11,7 @@ phases:
   pre_build:
     commands:
       ## CONFIGURE THIS: Repo name, please make sure this repo exists in ECR
-      - export IMAGE_REPO_NAME=399606388468.dkr.ecr.us-east-1.amazonaws.com/ecs-encryption-blog-proxy
+      - export IMAGE_REPO_NAME=ecs-encryption-blog-proxy
 
   build:
     commands:
