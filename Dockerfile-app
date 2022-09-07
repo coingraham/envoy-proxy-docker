@@ -1,8 +1,7 @@
 FROM envoyproxy/envoy-alpine-dev:latest
 
-ARG DEBIAN_FRONTEND=noninteractive
-ENV TZ="America/New_York"
-RUN apt-get install -y tzdata
+ENV TZ=America/New_York \
+    DEBIAN_FRONTEND=noninteractive
 
 RUN apk update && apk add python3 bash curl; pip3 install -q Flask==0.11.1 requests==2.18.4; mkdir /code
 
