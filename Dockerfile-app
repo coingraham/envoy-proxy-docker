@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ="America/New_York"
 RUN apt-get install -y tzdata
 
-RUN apk update && apk add python3 bash curl;       pip3 install -q Flask==0.11.1 requests==2.18.4;       mkdir /code
+RUN apk update && apk add python3 bash curl; pip3 install -q Flask==0.11.1 requests==2.18.4; mkdir /code
 
 ADD ./service.py /code
 
